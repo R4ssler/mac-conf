@@ -7,45 +7,27 @@
     brew_taps:
       - homebrew/cask-fonts
       - buo/cask-upgrade
-      - heroku/brew
     brew_packages:
       - git
       - zsh
-      - neovim
-      - iperf
       - tmux
       - wget
       - tree
-      - wakeonlan
       - antigen
-      - minicom
       - pass
       - pwgen
-      - bat
-      - prettyping
       - diff-so-fancy
-      - noti
-      - heroku
     cask_packages:
       - font-source-code-pro-for-powerline
       - iterm2
       - atom
       - spotify
-      - adium
-      - alfred
-      - balenaetcher
-      - nextcloud
       - gpg-suite-no-mail
-      - omnifocus
-      - yubico-yubikey-manager
-      - presentation
-      - texpad
       - qlcolorcode
       - qlstephen
       - qlmarkdown
       - quicklook-json
       - suspicious-package
-      - visual-studio-code
   - role: geerlingguy.mas
     tags: mas
     mas_signin_dialog: false
@@ -89,17 +71,3 @@
       mas_installed_apps:
         - id: 497799835
           name: "Xcode"
-
-- hosts: devel-uc
-  roles:
-    - role: Meuk.osxc-packages
-      install_cask: false       # Workaround
-      brew_taps:
-        - osx-cross/avr
-        - homebrew/cask-drivers
-      brew_packages:
-        - avr-gcc
-        - minicom
-      cask_packages:
-        - arduino
-        - ftdi-vcp-driver
