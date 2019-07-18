@@ -11,4 +11,4 @@ all:
         {}
     pc:
       hosts:
-        {}
+        localhost

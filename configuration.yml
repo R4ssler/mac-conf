@@ -1,22 +1,9 @@
 ---
 # Configure your freshly installed software
 - hosts: all
-  roles:
-    - role: jgkim.atom
-      atom_upgrade_all: true
-      atom_packages:
-        - git-projects
-        - minimap
-        - minimap-cursorline
-        - minimap-git-diff
-        - tree-view-git-status
-        - platformio-ide-terminal
   post_tasks:
     - file: src={{playbook_dir}}/dotfiles/zshrc dest=/Users/{{ ansible_user_id }}/.zshrc state=link force=yes
     - file: src={{playbook_dir}}/dotfiles/functions dest=/Users/{{ ansible_user_id }}/.functions state=link force=yes
-    - file: src={{playbook_dir}}/dotfiles/gpg.conf dest=/Users/{{ ansible_user_id }}/.gnupg/gpg.conf state=link force=yes
-    - file: src={{playbook_dir}}/dotfiles/gpg-agent.conf dest=/Users/{{ ansible_user_id }}/.gnupg/gpg-agent.conf state=link force=yes
-    - file: src={{playbook_dir}}/dotfiles/sshcontrol dest=/Users/{{ ansible_user_id }}/.gnupg/sshcontrol state=link force=yes
     - file: src={{playbook_dir}}/dotfiles/gitconfig dest=/Users/{{ ansible_user_id }}/.gitconfig state=link force=yes
     - file: src={{playbook_dir}}/dotfiles/gitignore dest=/Users/{{ ansible_user_id }}/.gitignore state=link force=yes
     - file: src={{playbook_dir}}/dotfiles/.vimrc dest=/Users/{{ ansible_user_id }}/.vimrc state=link force=yes
