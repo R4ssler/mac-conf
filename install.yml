@@ -26,6 +26,7 @@
       - qlstephen
       - qlmarkdown
       - quicklook-json
+      - mattermost
   post_tasks:
     - git:
         repo: 'https://github.com/VundleVim/Vundle.vim.git'
@@ -51,9 +52,3 @@
       tags: virtualbox
       cask_packages:
         - virtualbox
-    - role: geerlingguy.mas
-      tags: mas
-      mas_signin_dialog: false
-      mas_installed_apps:
-        - id: 497799835
-          name: "Xcode"
